@@ -1,0 +1,7 @@
+# Build the branding changes instead of pulling the upstream prebuilt image.
+services:
+  postiz:
+    image: bob-social:local
+    build:
+      context: .
+      dockerfile: Dockerfile.dev

@@ -1,9 +1,6 @@
-import { getT } from '@gitroom/react/translation/get.translation.service.backend';
-
 export const dynamic = 'force-dynamic';
 import { ReactNode } from 'react';
 import loadDynamic from 'next/dynamic';
-import { TestimonialComponent } from '@gitroom/frontend/components/auth/testimonial.component';
 import { LogoTextComponent } from '@gitroom/frontend/components/ui/logo-text.component';
 import { MantineWrapper } from '@gitroom/react/helpers/mantine.wrapper';
 import { Toaster } from '@gitroom/react/toaster/toaster';
@@ -13,7 +10,6 @@ export default async function AuthLayout({
 }: {
   children: ReactNode;
 }) {
-  const t = await getT();
 
   return (
     <MantineWrapper>
@@ -29,12 +25,15 @@ export default async function AuthLayout({
         </div>
         <div className="text-[36px] flex-1 pt-[88px] hidden lg:flex flex-col items-center">
           <div className="text-center">
-            Over <span className="text-[42px] text-[#FC69FF]">20,000+</span>{' '}
-            Entrepreneurs use
+            <span className="text-[14px] uppercase tracking-widest text-[#5eead4]">B.O.B Lesson 01 · Social</span>
             <br />
-            Postiz To Grow Their Social Presence
+            Build your own<br />social media scheduler.
+            <p className="mt-[24px] text-[18px] text-[#a3a3a3]">Build it. Own it. Learn how.</p>
           </div>
-          <TestimonialComponent />
+          <p className="mt-[32px] max-w-[420px] text-center text-[14px] text-[#a3a3a3]">
+            One practical project in the Building on a Budget lesson series.
+            Built on the open-source work of Postiz and its contributors.
+          </p>
         </div>
       </div>
     </MantineWrapper>
